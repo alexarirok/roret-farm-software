@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'profiles',
     'widget_tweaks',
+    'dashboard',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
