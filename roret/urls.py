@@ -23,12 +23,13 @@ urlpatterns = [
     path('', include('accounts.urls')),
     path('', include('profiles.urls')),
     path('', include('dashboard.urls')),
+    # path('', include('livestocks.urls')),
     # path('', include('accounting.urls')),
     # path('', include('contacts.urls')),
     # path('', include('crops.urls')),
     # path('', include('equipment.urls')),
     # path('', include('farmmap.urls')),
-    # path('', include('livestocks.urls')),
+    
     # path('', include('market.urls')),
     # path('', include('reports.urls'))
 ]

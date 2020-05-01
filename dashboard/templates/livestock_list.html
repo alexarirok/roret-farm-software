@@ -1,0 +1,291 @@
+{% extends 'dashboard.html' %}
+
+{% load static %}
+
+{% block javascript %}
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock %} 
+
+{% block content %}
+<div class="container">
+    <form>
+        <div>
+            <h1 class="page-header" style="background-color: #00b200; padding: 20px 50px ;"> New Livestock</h1>
+        </div>
+        <fieldset>
+            <legend style="font-size: 25px;">Basic Information</legend>
+           <br>
+            
+                <div class="form-group row">
+                    <label for="inputSurname" class="col-sm-2 col-form-label">Name/Label: </label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="inputSurname" placeholder="name/label">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputSurname" class="col-sm-2 col-form-label">Livestock Type:</label>
+                    <div class="col-sm-8">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Type</div>
+                            </div>
+                                <select class="form-control" id="inputState">
+                                    <option value="1">Dairy</option>
+                                    <option value="2">Beef</option>
+                                    <option value="3">Sheep</option>
+                                    <option value="3">Goats</option>
+                                    <option value="3">Poultry</option>
+                                    <option value="3">Camel</option>
+                                    <option value="3">Others</option>
+                                </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputFirstName" class="col-sm-2 col-form-label">Internal Id: </label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="inputFirstName" placeholder="First Name">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputNationality" class="col-sm-2 col-form-label">Key words: </label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="inputAddress" placeholder="eg. dairy">
+                        </div>
+                </div>
+                <div class="form-group row">
+                    <label for="colFormLabel" class="col-sm-2 col-form-label">Status </label>
+                    <div class="col-sm-8">
+                        <select id="inputState" class="form-control">
+                            <option selected>Active</option>
+                            <option>Culled</option>
+                            <option>Butchured</option>
+                            <option>Deceased</option>
+                            <option>Dry</option>
+                            <option>Lactating</option>
+                            <option>Off-farm</option>
+                            <option>Quarantined</option>
+                            <option>Sick</option>
+                            <option>Sold</option>
+                            <option>Weaning</option>
+                          </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputPreMode" class="col-sm-2 col-form-label">Breeding Stock: </label>
+                    <div class="col-sm-8">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck2">
+                            <label class="custom-control-label" for="customCheck2">Breeding</label>
+                        </div>
+                    </div>
+                </div>
+                
+            
+        </fieldset>  
+
+        <fieldset>
+            <legend style="font-size: 25px;">Physical Characteristics</legend>
+            <hr>
+            <div class="form-group row">
+                <label for="inputPreMode" class="col-sm-2 col-form-label">Sex: </label>
+                <div class="form-check form-check-inline">
+                    <div class="col-sm-8">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">Male</label>
+                    </div>
+                </div>
+                <div class="form-check form-check-inline">
+                    <div class="col-sm-8">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">Female</label>
+                    </div>
+                </div>
+                <div class="form-check form-check-inline">
+                    <div class="col-sm-8">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">Neutured</label>
+                    </div>
+                </div>
+            </div>
+                
+           
+            <div class="form-group row">
+                <label for="breed" class="col-sm-2 col-form-label">Breed: </label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="inputBreed" placeholder="eg. Breed">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputColoring" class="col-sm-2 col-form-label">Coloring: </label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="inputColor" placeholder="eg. Brown, White, Black etc.">
+                </div>
+                </div>
+            <div class="form-group row">
+                <label for="inputRetentionScore" class="col-sm-2 col-form-label">Retention Score: </label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="inputRetention" placeholder="">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="comment" class="col-sm-2 col-form-label">Description: </label>
+                <div class="col-sm-8">
+                    <textarea class="form-control" rows="2" id="comment" name="text"></textarea>
+                </div>
+            </div>
+        </fieldset> 
+        
+        <fieldset>
+            <legend style="font-size: 25px;">Identification: </legend>
+            <hr>
+            <div class="form-group row">
+                <label for="tagNumber" class="col-sm-2 col-form-label">Tag Number </label>
+                <div class="col-sm-8">
+                    <input type="number" class="form-control" id="inputTagNumber">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="tagColor" class="col-sm-2 col-form-label">Tag Color </label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="inputTagColor">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="otherTagNumber" class="col-sm-2 col-form-label">Other Tag Number </label>
+                <div class="col-sm-8">
+                    <input type="number" class="form-control" id="otherInputTagNumber" placeholder="eg:Usaid 5432">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="registryNumber" class="col-sm-2 col-form-label">Registry Number </label>
+                <div class="col-sm-8">
+                    <input type="number" class="form-control" id="registryInputTagNumber">
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend style="font-size: 25px;">Birth Information </legend>
+            <hr>
+            <div class="form-group row">
+                <label for="birtDate" class="col-sm-2 col-form-label">Birth Date</label>
+                <div class="col-sm-8">
+                    <div class="input-group date">
+                        <input type="text" class="form-control" id="js-date">
+                        <div class="input-group-addon">
+                            <span class="glyphicon glyphicon-th"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="form-group row">
+                <label for="colFormLabel" class="col-sm-2 col-form-label">Birth Weight </label>
+                <div class="col-sm-8">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">Kgs </div>
+                        </div>
+                        <input type="text" class="form-control" id="inlineFormInputGroupBirthWeight" placeholder="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="raised or purchased" class="col-sm-2 col-form-label">Raised or Purchased </label>
+                <div class="form-check form-check-inline">
+                    <div class="col-sm-8">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">Raised</label>
+                    </div>
+                </div>
+                <div class="form-check form-check-inline">
+                    <div class="col-sm-8">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">Purchased</label>
+                    </div>
+                </div>
+            </div>
+            
+        </fieldset>
+        <fieldset>
+            <legend style="font-size: 25px;">Additional Information </legend>
+            <hr>
+            <div class="form-group row">
+                <label for="colFormLabel" class="col-sm-2 col-form-label">Veterinarian </label>
+                <div class="col-sm-8">
+                    <select id="inputState" class="form-control">
+                        <option selected>choose from contacts</option>
+                        <option>...</option>
+                      </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-2">On Feed</div>
+                <div class="col-sm-8">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck1">
+                    <label class="form-check-label" for="gridCheck1">
+                      On feed
+                    </label>
+                  </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputFeedType" class="col-sm-2 col-form-label">Feed Type</label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="inputFeedType" placeholder="eg. Boma Rhodes, Dairy meals">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="colFormLabel" class="col-sm-2 col-form-label">Feed Cost </label>
+                <div class="col-sm-8">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">Ksh </div>
+                        </div>
+                        <input type="text" class="form-control" id="inlineFormInputGroupBirthWeight" placeholder="">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="colFormLabel" class="col-sm-2 col-form-label">Measure Harvest In </label>
+                <div class="col-sm-8">
+                    <select id="inputState" class="form-control">
+                        <option selected>Quantity</option>
+                        <option>Kilograms</option>
+                        <option>Grams</option>
+                        <option>Tons</option>
+                        <option>Bales</option>
+                        <option>Litres</option>
+                        
+                      </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="colFormLabel" class="col-sm-2 col-form-label">Estimated Revenue </label>
+                <div class="col-sm-8">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">Ksh</div>
+                        </div>
+                            <input class="form-control" id="animalmarketprice" placeholder="0.00" 
+                            type="number">
+                        <div class="input-group-append">
+                            <div class="input-group-text">Per Harvest Unit</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+    <br>
+    <div class="footerButtons" style="text-align: right;">
+        <button class="btn btn-light" type="submit">Cancel</button>
+        <button class="btn btn-primary" type="submit">Save</button>
+    </div>
+    <hr>
+</div>
+
+{% endblock %}
